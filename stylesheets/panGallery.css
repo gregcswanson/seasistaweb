@@ -1,0 +1,390 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+a{ 
+	text-decoration: none; 
+}
+
+ul{
+	 list-style: none;
+}
+
+body {
+	background:#333;
+	overflow:hidden; 
+	margin: 30px;
+}
+
+
+
+/* wrapper for the whole component, set size and position here */
+#componentWrapper{
+	position:absolute;
+	top: 60px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	/*width:100%;
+	height:100%;*/
+	
+	/* font-family: "YanoneKaffeesatzRegular", Geneva, sans-serif; */
+	font-size: 30px;
+
+}
+
+
+
+
+/*image pan settings*/
+#panHolder{
+	position:relative;
+	height:0px; 
+	width:100%; 
+	overflow:hidden; 
+}
+/*image holder 1*/
+#panHolder #img1{
+	position:absolute;
+	display:none;
+}
+/*image holder 2*/
+#panHolder #img2{
+	position:absolute;
+	display:none;
+}
+
+
+
+
+/*thumbnails scroller settings*/
+#thumbWrapper{
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	overflow:hidden;
+	/*background:yellow;*/
+}
+
+#thumbs{
+	position:relative;
+}
+
+#thumbList{
+	/*background:green;*/
+	position:relative;
+}
+
+/*gallery categories*/
+#thumbList .category{
+	display:none;
+}
+
+/* move thumbs left btn */
+#thumbsLeft{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:30px;
+	height:53px;
+	cursor:pointer;
+	
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+
+/* move thumbs right btn */
+#thumbsRight{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	width:30px;
+	height:53px;
+	cursor:pointer;
+	
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+/* menu wrapper, holds whole menu, menu is constructed and positioned in the code */
+#menuWrapper{
+	position:absolute;
+	/*background:green;*/
+	display:none;
+}
+
+#menuHolder{
+	position:absolute;
+}
+
+/* transparent menu bg */
+#menu_bg{
+	position:absolute;
+	background:#000;
+}
+
+.menuRowMasker{
+	position:relative;
+	float:left;
+	overflow:hidden;
+}
+
+.menuRowMasker .menuRowHolder{
+	position:absolute;
+}
+
+
+/* menu controls, position controls around the menu here */
+#menuWrapper #menu_back{
+	position:absolute;
+	width:40px;
+	height:40px;
+	top:177px;
+	left:-50px;
+	cursor:pointer;
+}
+
+#menuWrapper #menu_forward{
+	position:absolute;
+	width:40px;
+	height:40px;
+	left:780px;
+	top:177px;
+	cursor:pointer;
+}
+
+#menuWrapper #menu_close{
+	position:absolute;
+	width:40px;
+	height:40px;
+	left:365px;
+	top:-50px;
+	cursor:pointer;
+}
+
+.menuTitle{
+	position:absolute;
+	left:0px;
+	color:#fff;
+	background:#111;
+	padding: 5px 20px 5px 20px;
+}
+
+
+
+
+
+
+
+
+
+/* info */
+#info_wrapper{
+	position:absolute;
+	/*background:#111;*/
+	top:0px;
+	left:0px;
+	
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+
+#info_title{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+#info_toggle{
+	position:absolute;
+	width:15px;
+	height:10px;
+	top:2px;
+	cursor:pointer;
+}
+
+/* info masker */
+#info_holder{
+	position:absolute;
+	overflow:hidden;
+	top:0px;
+	left:0px;
+	/* max height of info area (set min width in the index.html settings) */
+	height:260px;
+	width:100%;
+}
+
+#info_holderMasker{
+	position:absolute;
+	left:0px;
+	overflow:hidden;
+	height:0px;
+}
+
+#info_content a{
+    font-size:20px;
+	color:#FF0;
+}
+
+#info_content a:hover, a:active{
+   text-decoration:underline;
+}
+
+.title{
+	position:absolute;
+	top:0px;
+	left:0px;
+	/* font-family: "YanoneKaffeesatzRegular", Geneva, sans-serif; */
+	font-size: 30px;
+	/*font-weight:bold;*/
+	color:#fff;
+	background:#111;
+	padding: 5px 20px 5px 20px;
+}
+
+.description{
+	/*font-family: "YanoneKaffeesatzRegular", Geneva, sans-serif; */
+	font-size: 16px;
+	background:#111;
+	color:#fff;
+	padding: 10px 10px 10px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* gallery controls (menu toggle, slideshow toggle), centered at the top */
+#galleryControls{
+	position:absolute;
+	width:85px;
+	height:40px;
+	top:0px;
+	left:50%;
+	margin-left: -42px;
+	/*background:green;*/
+	
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+
+#galleryControls #menu_toggle{
+	position:absolute;
+	width:40px;
+	height:40px;
+	cursor:pointer;
+	left:0px;
+}
+
+#galleryControls #slideshow_toggle{
+	position:absolute;
+	width:40px;
+	height:40px;
+	cursor:pointer;
+	left:45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* image preloader */
+#imagePreloader{
+	display:none;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-25px 0px 0px -25px;
+	background:#000 url('../icons/loader.gif') no-repeat center center;
+	width:50px;
+	height:50px;
+	z-index:999;
+	opacity:0.7;
+}
+
+/* image backward, centered at y axis */
+#backward{
+	position:absolute;
+	width:40px;
+	height:40px;
+	left:0px;
+	
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+
+}
+
+/* image forward, centered at y axis */
+#forward{
+	position:absolute;
+	width:40px;
+	height:40px;
+	right:0px;
+	
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+
+}
+
+/* image size toggle, positioned top right */
+#sizeToggle{
+	position:absolute;
+	width:40px;
+	height:40px;
+	top:0px;
+	right:0px;
+	
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>seasista gallery</title>
+    
+        <!-- ***** START COPY INTO HEAD SECTION ***** -->
+          
+        <link rel="stylesheet" type="text/css" href="/stylesheets/panGallery.css" />
+        <link rel="stylesheet" type="text/css" href="/stylesheets/jquery.jscrollpane.css" media="all" />
+        <link href='http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo' rel='stylesheet' type='text/css'>
+    	<link rel="stylesheet" type="text/css" href="/stylesheets/site.css" />
+        
+        <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="/javascripts/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="/javascripts/jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="/javascripts/mwheelIntent.js"></script>
+        <script type="text/javascript" src="/javascripts/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript">jQuery.noConflict();</script>
+        <script type="text/javascript" src="/javascripts/jquery.panGallery.min.js"></script>
+        <script type="text/javascript">
+            
+            // SETTINGS
+            var settings = {
+                <!-- slideshowDelay: in seconds -->
+                slideshowDelay: 3,
+                <!-- slideshowOn: true, false -->
+                slideshowOn:true,
+                <!-- activeCategory: enter -1 to start with menu opened (and no category loaded), or enter: 0 = 1st category loaded, 1 = 2nd category loaded, 2 = 3rd category loaded... etc), in order gallery are listed in the html) -->
+                activeCategory: 0,
+                <!-- thumbScale: gallery thumb rollover scale -->
+                thumbScale: 1.5,
+                <!-- thumbWidth: gallery thumb width -->
+                thumbWidth:160,
+                <!-- thumbHeight: gallery thumb height -->
+                thumbHeight:100,
+                <!-- menu is built in the code, all you need to specify is menu thumb width and height -->
+                <!-- menuThumbWidth: menu thumb width -->
+                menuThumbWidth:250,
+                <!-- menuThumbHeight: menu thumb height -->
+                menuThumbHeight:375,
+                <!-- menuBorderSize: size of the border around menu -->
+                menuBorderSize:10,
+                <!-- menuBorderOpacity: (opacity around menu) value = 0-1 -->
+                menuBorderOpacity:0.5,
+                <!-- minDescriptionWidth: minimal width of the description area (set height in the css) -->
+                minDescriptionWidth:250,
+                <!-- autoOpenDescription: true/false (auto open description if exist when image is loaded) -->
+                autoOpenDescription:true
+            };
+            
+            jQuery(window).load(function() {
+                jQuery.panGallery(settings);
+                gallerySettings = null;
+            });
+
+        </script>
+        
+        <!-- ***** END COPY INTO HEAD SECTION ***** -->
+
+
+
+    
+  </head>
+  <body class="gallery">   
+  		<div class="topbar">
+  			<div class="site">
+				<a href="/">seasista photography</a>
+			</div>
+			<div class="nav clearfix">
+				<ul>
+					<li><a href="/">home</a></li>
+					<!-- <li><a href="/gallery">gallery</a></li> -->
+					<li><a href="/shop">shop</a></li>
+					<li><a href="/about">contact us</a></li>
+				</ul>
+			</div>
+  		</div>
+		<div id="componentWrapper">
+     
+            <!-- image pan holder  -->
+            <div id="panHolder">
+                <div id="img1"></div>
+                <div id="img2"></div>
+            </div>
+            
+            <!-- image preloader (above image, below menu) -->
+            <div id="imagePreloader"></div>
+            
+            <!-- holder for the info (description). Delete this whole div if you dont want to use title and description on images. -->
+             <div id="info_wrapper">
+                <div id="info_title"></div>
+                <div id="info_holderMasker"><div id="info_holder"></div></div>
+                <div id="info_toggle"><img src="/icons/openInfo.png" alt="info_toggle" width="15" height="10" /></div>
+             </div>
+            
+            <!-- menu toggle and slideshow toggle button -->
+            <div id="galleryControls">
+            
+                <!-- menu toggle -->
+                <div id="menu_toggle"><img src="/icons/menu_toggle.png" alt="menu_toggle" width="40" height="40" /></div>
+                
+                <!-- slideshow toggle -->
+                <!-- <div id="slideshow_toggle"><img src="/icons/play.png" alt="slideshow_toggle" width="40" height="40" /></div> -->
+            
+            </div>
+            
+            <!--    category menu -->
+             <div id="menuWrapper">
+              
+                    <!-- menu background -->
+                    <div id="menu_bg"></div>
+              
+                    <div id="menuHolder">
+                    
+                        <div class="menuRowMasker">
+                            <div class="menuRowHolder"></div>
+                        </div> 
+                        
+                        <div class="menuRowMasker">
+                            <div class="menuRowHolder"></div>
+                        </div> 
+                        
+                        <div class="menuRowMasker">
+                            <div class="menuRowHolder"></div>
+                        </div> 
+                    
+                     </div> 
+                     
+                     <!-- menu backward -->
+                   <div id="menu_back"><img src="/icons/backward.png" alt="menu_back" width="40" height="40" /></div>
+                   
+                   <!-- menu forward -->
+                   <div id="menu_forward"><img src="/icons/forward.png" alt="menu_forward" width="40" height="40" /></div>
+                     
+                     <!-- menu close -->
+                   <div id="menu_close"><img src="/icons/close.png" alt="menu_close" width="40" height="40" /></div>
+                 
+             </div>
+            
+        <!-- thumb scroll holder -->
+        <div id="thumbWrapper">
+            <div id="thumbs">
+            	<div id="thumbList"> 
+            		<!-- all occasions -->
+            		<div class="category" data-title="" data-thumb="/menu/beach.jpg">
+                        <ul>
+                        	{{range .Images}}
+      							<li> 
+                            		<img src="/thumbs/seasista{{html .Name}}.jpg" alt="/images/seasista{{html .Name}}.jpg" data-link="{{ .Link}}" data-target="_blank" width="90" height="53" />
+                            	</li>
+                            {{end}}
+                         </ul> 
+                    </div>           
+                </div>
+             </div>
+         </div>
+         
+         <!-- thumbs left -->
+         <div id="thumbsLeft"><img src="/icons/thumbsLeft.png" alt="thumbsLeft" width="30" height="53" /></div>
+     
+         <!-- thumbs right -->
+         <div id="thumbsRight"><img src="/icons/thumbsRight.png" alt="thumbsRight" width="30" height="53" /></div>
+        
+         <!-- image control buttons -->
+        
+         <!-- backward -->
+         <!-- <div id="backward"><img src="/icons/backward.png" alt="backward" width="40" height="40" /></div> -->
+         
+         <!-- forward -->
+         <!-- <div id="forward"><img src="/icons/forward.png" alt="forward" width="40" height="40" /></div> -->
+         
+         <!-- toggle_size -->
+         <!-- <div id="sizeToggle"><img src="/icons/plus.png" alt="sizeToggle" width="40" height="40" /></div> -->
+          <!-- slideshow toggle -->
+         <div id="slideshow_toggle" style="position:absolute;width:40px;height:40px;top:0px;right:0px;">
+         <img src="/icons/play.png" alt="slideshow_toggle" width="40" height="40" />
+         </div>
+    
+    </div>
+</body>
+</html>
+      

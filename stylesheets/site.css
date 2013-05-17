@@ -1,0 +1,187 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+body{
+	font-family: 'Swanky and Moo Moo', Verdana;
+	min-width: 960px;
+	background:#F1E4C3;
+	background:url("/sand.jpg") repeat;
+	margin: 60px;
+}
+
+body.gallery{
+	overflow:hidden; 
+	margin: 50px;
+}
+
+.container {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	clear: both;
+	display: block;
+	/*background: #F1E4C3;
+	-webkit-border-radius: 0px 0px 15px 15px;
+	-moz-border-radius: 0px 0px 15px 15px;
+	border-radius: 0px 0px 15px 15px;
+	-webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+	opacity:0.8;
+	filter:alpha(opacity=80); */ /* For IE8 and earlier */
+}
+
+.nav-title {
+	background: #55BBEE;
+	-webkit-border-radius: 15px 15px 0px 0px;
+	-moz-border-radius: 15px 15px 0px 0px;
+	border-radius: 15px 15px 0px 0px;
+}
+
+.topbar {
+  height: 55px;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  overflow: visible;
+  background: #55BBEE;
+  opacity:0.8
+}
+
+.grid_1,
+.grid_2,
+.grid_3 {
+	display:block;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+h1 {
+	padding: 1px;
+	margin: 1px;
+	font-size: 35px;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+.title {
+	float: left;
+	margin-left: 10px;
+	height: 50px;
+	vertical-align:bottom;
+	color:white;
+	text-shadow: 2px 2px #111199;
+}
+
+.nav {
+	float: right;
+	height: 50px;
+	margin-top: 5px;
+	margin-right: 10px;
+	vertical-align:top;
+	text-shadow: 2px 2px #111199;
+}
+
+.site {
+	position: absolute;
+	/* float: left; */
+	height: 40px;
+	margin-top: -10px;
+	margin-left: 10px;
+	vertical-align:top;
+	text-shadow: 2px 2px #111199;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+p {
+	font-size: 20px;
+}
+
+img {
+	padding: 0;
+	margin: 0;
+}
+
+.container .grid_1 {
+	width:300px;
+}
+
+.container .grid_2 {
+	width:620px;
+}
+
+.container .grid_3 {
+	width:940px;
+}
+
+
+DIV.nav li{
+	display: inline;
+	margin-right:15px;
+}
+
+DIV.site li{
+	display: block;
+	margin-right:0px;
+}
+
+DIV.nav ul, DIV.site li{
+	list-style-type: none;
+}
+
+DIV.nav ul a{
+	font-size: 25px;
+	margin:0;
+	padding:0;
+}
+
+DIV.site ul a{
+	margin: 0px;
+	font-size: 50px;
+	margin:0;
+	padding:0;
+}
+
+a {
+	color: #222222;
+	text-decoration:none;
+	margin:0;
+	padding:0;
+}
+
+.site a {
+	font-size: 42px;
+	border: 0px;
+	display: inline;
+}
+
+DIV.nav a, DIV.site a {
+	color:white;
+	text-decoration:none;
+}
+
+DIV.nav a:hover, DIV.nav a.selected, DIV.site a:hover, DIV.site a.selected{
+	text-decoration:underline;
+}
+
+
+DIV.content {
+	
+}

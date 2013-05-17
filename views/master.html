@@ -1,0 +1,39 @@
+<!doctype html>
+<head>
+	<title>{{.Title}}</title>
+    <link href='http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo' rel='stylesheet' type='text/css'>
+    {{with .CssUrls}}
+		{{range .}}
+    		<link rel="stylesheet" href="/stylesheets/{{.}}.css" />
+    	{{end}}
+    {{end}}
+</head>
+<body>
+	<div class="topbar">
+			<div class="site">
+				<a href="/">seasista photography</a>
+			</div>
+			<div class="nav clearfix">
+				<ul>
+					<li><a href="/">home</a></li>
+					<!-- <li><a href="/gallery">gallery</a></li> -->
+					<li><a href="/shop">shop</a></li>
+					<li><a href="/about">contact us</a></li>
+				</ul>
+			</div>
+	</div>
+	<div class="container clearfix">
+		{{.ContentHTML}}
+	</div>
+	{{with .MasterJavascripts}}
+		{{range .}}
+    		<script src="/javascripts/{{.}}.js" ></script>
+    	{{end}}
+    {{end}}
+    {{with .Javascripts}}
+    	{{range .}}
+    		<script src="/javascripts/{{.}}.js" ></script>
+    	{{end}}
+    {{end}}
+</body>
+</html>
